@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Выбор фильма</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+  <body>
+    <p id="link2"><a target="_blank" href="index.html">На главную страницу</a></p>
+    <form class="search" action="/handler.php" method="get">
+      <h3>Какой фильм надо найти?</h3>
+      <p><input type="text" name="movieTitle" placeholder="Название фильма" /></p>
+      <p><textarea name="keywords" cols="40" rows="2" placeholder="Ключевые слова"></textarea></p>
+      <div class="form">
+        <p><label><input type="checkbox" value="allGenres" name="genre[]" checked="checked"/>Вce направления</label>
+        <p><label><input type="checkbox" value="countries" name="genre[]" />В любую страну мира</label>
+        <p><label><input type="checkbox" value="backToThePast" name="genre[]" />Назад в прошлое</label></p>
+        <p><label><input type="checkbox" value="underwater" name="genre[]" />В подводный мир</label></p>
+        <p><label><input type="checkbox" value="faunaAndFlora" name="genre[]" />В мир фауны и флоры</label></p>
+        <p><label><input type="checkbox" value="space" name="genre[]" />В космическую даль</label></p>
+        <p><label><input type="checkbox" value="quantumWorld" name="genre[]" />В квантовый мир</label></p>
+      </div>
+      <div class="form">
+        <p><input type="radio" value="noSubtitles" name="subtitles" checked="checked"> Без субтитров</p>
+        <p><input type="radio" value="withSubtitles" name="subtitles"> С субтитрами</p>
+      </div>
+      <div class="form">
+        <select multiple name="releaseCountry[]">
+          <option disabled>Выберите страну производства фильма</option>
+          <option selected value="Russia">Россия</option>
+          <option value="USA">США</option>
+          <option value="France">Франция</option>
+          <option value="Germany">Германия</option>
+          <option value="Italy">Италия</option>
+          <option value="India">Индия</option>
+          <option value="Japan">Япония</option>
+          <option value="Canada">Канада</option>
+          <option value="USSR">СССР</option>
+        </select>
+      </div>
+      <div class="form">
+        <select name="releaseYear">
+          <option selected disabled>Выберите год выпуска</option>
+          <option value="allYears">Все года</option>
+          <option value="1970-1979">1970-1979</option>
+          <option value="1980-1989">1980-1989</option>
+          <option value="1990-1999">1990-1999</option>
+          <option value="2000-2009">2000-2009</option>
+          <option value="2010-2019">2010-2019</option>
+          <option value="с 2020">с 2020 года</option>
+        </select>
+      </div>
+      <button type="reset">Сбросить</button>
+      <button type="submit">Искать</button>
+    </form>
+  </body>
+</html>
